@@ -1,0 +1,148 @@
+## Unity Engine ##
+## Auto detect text files and perform LF normalization ##
+## File built based on personal experience and the official Unity documentation updated to 2022 ##
+
+* text=auto
+
+*.cs diff=csharp text
+*.cginc text
+*.shader text
+
+# Unity YAML
+*.anim -text merge=unityyamlmerge diff
+*.asset -text merge=unityyamlmerge diff
+*.controller -text merge=unityyamlmerge diff
+*.mat -text merge=unityyamlmerge diff
+*.meta -text merge=unityyamlmerge diff
+*.physicMaterial -text merge=unityyamlmerge diff
+*.physicsMaterial2D -text merge=unityyamlmerge diff
+*.prefab -text merge=unityyamlmerge diff
+*.unity -text merge=unityyamlmerge diff
+
+# Unity LFS
+*.cubemap filter=lfs diff=lfs merge=lfs -text
+*.unitypackage filter=lfs diff=lfs merge=lfs -text
+
+--------------------------------------------------
+
+# 2D formats
+# Read more in: https://docs.unity3d.com/Manual/ImportingTextures.html
+
+# Recommended use:
+*.[tT][gG][aA] filter=lfs diff=lfs merge=lfs -text
+*.[pP][sS][dD] filter=lfs diff=lfs merge=lfs -text
+
+# Can also be used:
+*.[bB][mM][pP] filter=lfs diff=lfs merge=lfs -text
+*.[tT][iI][fF] filter=lfs diff=lfs merge=lfs -text
+*.[jJ][pP][gG] filter=lfs diff=lfs merge=lfs -text
+*.[gG][iI][fF] filter=lfs diff=lfs merge=lfs -text
+*.[iI][fF][fF] filter=lfs diff=lfs merge=lfs -text
+*.[pP][iI][cC][tT] filter=lfs diff=lfs merge=lfs -text
+*.[pP][nN][gG] filter=lfs diff=lfs merge=lfs -text
+*.[tT][iI][fF][fF] filter=lfs diff=lfs merge=lfs -text
+
+# Other supported formats:
+*.[hH][dD][rR] filter=lfs diff=lfs merge=lfs -text
+*.[eE][xX][rR] filter=lfs diff=lfs merge=lfs -text
+
+--------------------------------------------------
+
+# 3D formats
+# Read more in: https://docs.unity3d.com/2020.1/Documentation/Manual/3D-formats.html
+
+# Always recommended to use:
+*.[fF][bB][xX] filter=lfs diff=lfs merge=lfs -text
+
+# Can also be used:
+*.[oO][bB][jJ] filter=lfs diff=lfs merge=lfs -text
+*.[dD][aA][eE] filter=lfs diff=lfs merge=lfs -text
+*.[dD][xX][fF] filter=lfs diff=lfs merge=lfs -text
+
+# Other supported formats:
+*.[aA][bB][cC] filter=lfs diff=lfs merge=lfs -text
+
+--------------------------------------------------
+
+# Audio formats
+# Read more in: https://docs.unity3d.com/2022.2/Documentation/Manual/AudioFiles.html
+
+# Always recommended to use:
+*.[wW][aA][vV] filter=lfs diff=lfs merge=lfs -text
+
+# Can also be used:
+*.[mM][pP]3 filter=lfs diff=lfs merge=lfs -text
+*.[oO][gG][gG] filter=lfs diff=lfs merge=lfs -text
+*.[aA][iI][fF] filter=lfs diff=lfs merge=lfs -text
+*.[aA][iI][fF][fF] filter=lfs diff=lfs merge=lfs -text
+*.[iI][tT] filter=lfs diff=lfs merge=lfs -text
+*.[mM][oO][dD] filter=lfs diff=lfs merge=lfs -text
+*.[sS]3[mM] filter=lfs diff=lfs merge=lfs -text
+*.[xX][mM] filter=lfs diff=lfs merge=lfs -text
+
+--------------------------------------------------
+
+# Video formats
+# Read more in: https://docs.unity3d.com/2022.2/Documentation/Manual/VideoSources-FileCompatibility.html
+
+# Always recommended to use, supports all platforms:
+*.[mM][pP]4 filter=lfs diff=lfs merge=lfs -text
+
+# Can also be used, only some platforms are supported:
+*.[aA][sS][fF] filter=lfs diff=lfs merge=lfs -text
+*.[aA][vV][iI] filter=lfs diff=lfs merge=lfs -text
+*.[dD][vV] filter=lfs diff=lfs merge=lfs -text
+*.[mM]4[vV] filter=lfs diff=lfs merge=lfs -text
+*.[mM][o][vV] filter=lfs diff=lfs merge=lfs -text
+*.[mM][pP][gG] filter=lfs diff=lfs merge=lfs -text
+*.[mM][pP][eE][gG] filter=lfs diff=lfs merge=lfs -text
+*.[oO][gG][vV] filter=lfs diff=lfs merge=lfs -text
+*.[vV][pP]8 filter=lfs diff=lfs merge=lfs -text
+*.[wW][eE][bB][mM] filter=lfs diff=lfs merge=lfs -text
+*.[wW][mM][vV] filter=lfs diff=lfs merge=lfs -text
+
+--------------------------------------------------
+
+# Build:
+# Read more in: https://docs.unity3d.com/2022.2/Documentation/Manual/Plugins.html
+
+*.[dD][lL][lL] filter=lfs diff=lfs merge=lfs -text
+*.[mM][dD][bB] filter=lfs diff=lfs merge=lfs -text
+*.[pP][dD][bB] filter=lfs diff=lfs merge=lfs -text
+*.[sS][oO] filter=lfs diff=lfs merge=lfs -text
+
+--------------------------------------------------
+
+# Packaging
+*.7[zZ] filter=lfs diff=lfs merge=lfs -text
+*.[bB][zZ]2 filter=lfs diff=lfs merge=lfs -text
+*.[gG][zZ] filter=lfs diff=lfs merge=lfs -text
+*.[rR][aA][rR] filter=lfs diff=lfs merge=lfs -text
+*.[tT][aA][rR] filter=lfs diff=lfs merge=lfs -text
+*.[tT][aA][rR].[gG][zZ] filter=lfs diff=lfs merge=lfs -text
+*.[zZ][iI][pP] filter=lfs diff=lfs merge=lfs -text
+
+--------------------------------------------------
+
+# Fonts
+# Read more in: https://docs.unity3d.com/Manual/class-Font.html#:~:text=Supported%20Font%20formats%20are%20TrueType,otf%20files).
+
+*.[tT][tT][fF] filter=lfs diff=lfs merge=lfs -text
+*.[oO][tT][fF] filter=lfs diff=lfs merge=lfs -text
+
+--------------------------------------------------
+
+# Documents
+*.[cC][sS][vV] filter=lfs diff=lfs merge=lfs -text
+
+# This is optional, to store information you want to share in the repository as documentation about the project, remove it if you don't need it.
+*.[pP][dD][fF] filter=lfs diff=lfs merge=lfs -text
+
+--------------------------------------------------
+
+# Collapse Unity-generated files on GitHub
+*.asset             linguist-generated
+*.mat               linguist-generated
+*.meta              linguist-generated
+*.prefab            linguist-generated
+*.unity             linguist-generated
