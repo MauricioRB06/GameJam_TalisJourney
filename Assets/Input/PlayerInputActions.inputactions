@@ -33,24 +33,6 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "JumpElectric",
-                    "type": "Button",
-                    "id": "c034efcb-1a2a-4dfb-a2ad-c159278cef65",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
-                    "name": "JumpSlime",
-                    "type": "Button",
-                    "id": "0ffe364d-2c2b-4134-8c70-9dbe2cccb52a",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
                     "name": "Attack",
                     "type": "Button",
                     "id": "bd46564c-1d32-4745-8bf1-3530290f687e",
@@ -177,50 +159,6 @@
                     "processors": "",
                     "groups": "",
                     "action": "JumpWind",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "5c87e752-90db-48bf-993a-35ec5ccf98ef",
-                    "path": "<Keyboard>/k",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "JumpElectric",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "671e8ed3-ac27-4530-bfac-9d81a38a9712",
-                    "path": "<Gamepad>/buttonWest",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "JumpElectric",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "1fef6ff8-7e20-4ca5-9a8b-4dfcc33bda45",
-                    "path": "<Keyboard>/l",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "JumpSlime",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "7086feca-240b-42be-aa2f-88bafdd3c9a7",
-                    "path": "<Gamepad>/buttonNorth",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "JumpSlime",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
