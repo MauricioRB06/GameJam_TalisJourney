@@ -40,7 +40,7 @@ namespace Player
         private bool _moveControllerEnabled = true;
         
         // We use it to detect the direction in which the object is facing
-        private int _facingDirection;
+        public int facingDirection;
 
         // We use it to avoid having to create a new vector every time the character moves
         private Vector2 _newVelocity;
@@ -106,12 +106,12 @@ namespace Player
             if (_playerRigidbody.velocity.x > 0)
             {
                 transform.localScale = Vector3.one;
-                _facingDirection = 1;
+                facingDirection = 1;
             }
             else if (_playerRigidbody.velocity.x < 0)
             {
                 transform.localScale = new Vector3(-1, 1, 1);
-                _facingDirection = -1;
+                facingDirection = -1;
             }
         }
         
@@ -162,13 +162,15 @@ namespace Player
             {
                 case true when _playerPowerUp == PlayerStatePowerUp.FirePowerUp && _canAttack:
                     _canAttack = false;
-                    Debug.Log("Fire Attack");
-                    Debug.Log(_facingDirection);
+                    var transform1 = transform;
+                    Instantiate(firePowerUp, transform1.position, transform1.rotation);
+                    Debug.Log(facingDirection);
                     break;
                 case true when _playerPowerUp == PlayerStatePowerUp.WindPowerUp && _canAttack:
                     _canAttack = false;
-                    Debug.Log("Wind Attack");
-                    Debug.Log(_facingDirection);
+                    var transform2 = transform;
+                    Instantiate(windPowerUp, transform2.position, transform2.rotation);
+                    Debug.Log(facingDirection);
                     break;
             }
         }
