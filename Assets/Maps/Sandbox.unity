@@ -123,6 +123,32 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &176928326 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1125834557446774120, guid: 5d6f9a0a7f1597e41859661f44432a1c, type: 3}
+  m_PrefabInstance: {fileID: 1125834557354076974}
+  m_PrefabAsset: {fileID: 0}
+--- !u!50 &176928327
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 176928326}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 1
+  m_Constraints: 7
 --- !u!1 &354746788
 GameObject:
   m_ObjectHideFlags: 0
@@ -987,7 +1013,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1804367619}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.815, y: 1.546, z: 0}
+  m_LocalPosition: {x: -5.17, y: -0.07, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 354746789}
@@ -1198,17 +1224,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bush
       objectReference: {fileID: 0}
+    - target: {fileID: 1125834557446774120, guid: 5d6f9a0a7f1597e41859661f44432a1c, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1125834557446774121, guid: 5d6f9a0a7f1597e41859661f44432a1c, type: 3}
       propertyPath: m_RootOrder
       value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 1125834557446774121, guid: 5d6f9a0a7f1597e41859661f44432a1c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.938
+      value: -1.113
       objectReference: {fileID: 0}
     - target: {fileID: 1125834557446774121, guid: 5d6f9a0a7f1597e41859661f44432a1c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.298
+      value: 0.059
       objectReference: {fileID: 0}
     - target: {fileID: 1125834557446774121, guid: 5d6f9a0a7f1597e41859661f44432a1c, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1257,11 +1287,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6255773529464522729, guid: e6b5dc6aeb31cfb47b20dfc08c297b2d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.74
+      value: -0.992
       objectReference: {fileID: 0}
     - target: {fileID: 6255773529464522729, guid: e6b5dc6aeb31cfb47b20dfc08c297b2d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.59
+      value: 2.856
       objectReference: {fileID: 0}
     - target: {fileID: 6255773529464522729, guid: e6b5dc6aeb31cfb47b20dfc08c297b2d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1299,6 +1329,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rock
       objectReference: {fileID: 0}
+    - target: {fileID: 6255773529464522731, guid: e6b5dc6aeb31cfb47b20dfc08c297b2d, type: 3}
+      propertyPath: m_Mass
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 6255773529464522731, guid: e6b5dc6aeb31cfb47b20dfc08c297b2d, type: 3}
+      propertyPath: m_BodyType
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6255773529464522731, guid: e6b5dc6aeb31cfb47b20dfc08c297b2d, type: 3}
+      propertyPath: m_GravityScale
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e6b5dc6aeb31cfb47b20dfc08c297b2d, type: 3}
 --- !u!1001 &7873187443474985276
@@ -1314,7 +1356,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7873187445304274806, guid: 777902261284aa84c90a7b6525a6d7d8, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.181
+      value: 1.42
       objectReference: {fileID: 0}
     - target: {fileID: 7873187445304274806, guid: 777902261284aa84c90a7b6525a6d7d8, type: 3}
       propertyPath: m_LocalPosition.y
