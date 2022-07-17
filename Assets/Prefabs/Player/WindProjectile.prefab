@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8627084719843818255}
   - component: {fileID: 8627084719843818252}
   - component: {fileID: 8627084719843818253}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: WindProjectile
   m_TagString: WindProjectile
   m_Icon: {fileID: 0}
@@ -132,5 +132,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8cf65717c1c1429ca456686990a6dd9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projectileSpeed: 0
-  projectileLife: 0
+  projectileSpeed: 5

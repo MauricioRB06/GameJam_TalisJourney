@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 385838907696135138}
   - component: {fileID: 385838907696135141}
   - component: {fileID: 385838907696135140}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: FireProjectile
   m_TagString: FireProjectile
   m_Icon: {fileID: 0}
@@ -132,5 +132,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2205269757d04ef9a0b72f1671b41899, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projectileSpeed: 0
-  projectileLife: 0
+  projectileSpeed: 5
