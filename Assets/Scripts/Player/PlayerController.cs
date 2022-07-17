@@ -21,10 +21,18 @@ namespace Player
     
     public class PlayerController : MonoBehaviour
     {
+        [Header("Player Stats Settings")] [Space(5)]
         [ SerializeField ] private Transform groundPoint;
         [ SerializeField ] [Range(3,10)] private float movementSpeed = 6f;
         [ SerializeField ] [Range(5,15)] private float jumpForce = 12f;
         [ SerializeField ] private LayerMask groundLayer;
+        [Space(15)]
+        
+        [Header("PowerUps Settings")] [Space(5)]
+        [ SerializeField ] private GameObject firePowerUp;
+        [ SerializeField ] private GameObject windPowerUp;
+        [ SerializeField ] private GameObject electricPowerUp;
+        [ SerializeField ] private GameObject slimePowerUp;
         
         private PlayerStatePowerUp _playerPowerUp;
         private Rigidbody2D _playerRigidbody;

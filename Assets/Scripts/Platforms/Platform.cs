@@ -38,12 +38,12 @@ namespace Platforms
         [Tooltip("Sets whether the platform returns after falling")]
         [SerializeField] private bool platformReturn;
         [Tooltip("Sets the time it takes for the platform to return (in seconds)")]
-        [Range(3f, 15f)] [SerializeField] private float returnTime = 5;
+        [Range(0.2f, 15f)] [SerializeField] private float returnTime = 5;
         [Space(15)]
         
         [Header("Platform Destroy Settings")] [Space(5)]
         [Tooltip("If the platform does not return after falling, set the time it will be destroyed (in seconds)")]
-        [Range(1f, 6f)] [SerializeField] private float destroyTime = 3;
+        [Range(0.2f, 6f)] [SerializeField] private float destroyTime = 3;
         [Space(15)]
         
         [Header("Movable Platform Settings")] [Space(5)]
