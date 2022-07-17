@@ -134,7 +134,6 @@ namespace Player
             _playerRigidbody.velocity = new Vector2(_playerRigidbody.velocity.x, jumpForce);
             _playerPowerUp  = PlayerStatePowerUp.FirePowerUp;
             _canAttack = true;
-            Debug.Log("Fire PowerUp Selected");
         }
         
         // 
@@ -147,7 +146,6 @@ namespace Player
             _playerRigidbody.velocity = new Vector2(_playerRigidbody.velocity.x, jumpForce);
             _playerPowerUp  = PlayerStatePowerUp.WindPowerUp;
             _canAttack = true;
-            Debug.Log("Wind PowerUp Selected");
         }
         
         // 

@@ -14,6 +14,12 @@ namespace Platforms
     {
         
         private Rigidbody2D _rigidbody;
+
+        private void Awake()
+        {
+            _rigidbody = GetComponent<Rigidbody2D>();
+        }
+        
         private void OnTriggerEnter2D(Collider2D col)
         {
             if (col.gameObject.CompareTag("WindProjectile"))
@@ -24,7 +30,7 @@ namespace Platforms
         
         public void WindObjectInteraction()
         {
-            _rigidbody.AddForce(new Vector2(5, 0), ForceMode2D.Impulse);
+            transform.position += transform.right * (10 * Time.deltaTime);
         }
         
         // 
@@ -39,6 +45,11 @@ namespace Platforms
         {
             if (!collision.transform.CompareTag("Player")) return;
             collision.transform.SetParent(null);
+        }
+
+        public void DestroyBoat()
+        {
+            Destroy(gameObject);
         }
         
     }
