@@ -11,6 +11,13 @@ namespace Platforms
     
     public class Bush : MonoBehaviour, IFireObject
     {
+        private static readonly int Burn = Animator.StringToHash("Burn");
+        private Animator _animator;
+
+        private void Awake()
+        {
+            _animator = GetComponent<Animator>();
+        }
         
         private void OnCollisionEnter2D (Collision2D collision)
         {
@@ -21,6 +28,11 @@ namespace Platforms
         }
         
         public void FireObjectInteraction()
+        {
+            _animator.SetTrigger(Burn);
+        }
+
+        public void BushFire()
         {
             Destroy(gameObject);
         }

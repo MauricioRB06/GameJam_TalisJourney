@@ -1,5 +1,4 @@
 ﻿
-using System.Collections;
 using UnityEngine;
 
 namespace PowerUps
@@ -28,14 +27,8 @@ namespace PowerUps
 
         private void OnCollisionEnter2D(Collision2D collision)
         {
-           StartCoroutine(DestroyProjectile());
-        }
-
-        private IEnumerator DestroyProjectile()
-        {
-            yield return new WaitForSeconds(0.5f);
             Destroy(gameObject);
         }
-        
+
     }
 }

@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1125834557446774116}
   - component: {fileID: 1125834557446774119}
   - component: {fileID: 1125834557446774118}
+  - component: {fileID: 176928327}
   m_Layer: 0
   m_Name: Bush
   m_TagString: Untagged
@@ -98,7 +99,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.007375598, y: -0.24233869}
+  m_Offset: {x: 0.03898287, y: -0.35418916}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -109,7 +110,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.7270162, y: 0.89042073}
+  m_Size: {x: 1.6638019, y: 0.6667197}
   m_EdgeRadius: 0
 --- !u!95 &1125834557446774119
 Animator:
@@ -121,7 +122,7 @@ Animator:
   m_GameObject: {fileID: 1125834557446774120}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: cc40e5bd2d37b71459721d3c7479eb9d, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -142,3 +143,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9c56128f5a947758899bce8fa2833a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!50 &176928327
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1125834557446774120}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 1
+  m_Constraints: 7

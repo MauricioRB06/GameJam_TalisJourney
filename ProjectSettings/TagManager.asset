@@ -7,6 +7,7 @@ TagManager:
   - Dead
   - WindProjectile
   - FireProjectile
+  - Boat
   layers:
   - Default
   - TransparentFX
