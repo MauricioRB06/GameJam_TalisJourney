@@ -162,13 +162,12 @@ namespace Player
                     _canAttack = false;
                     var transform1 = transform;
                     Instantiate(firePowerUp, transform1.position, transform1.rotation);
-                    Debug.Log(facingDirection);
                     break;
+                
                 case true when _playerPowerUp == PlayerStatePowerUp.WindPowerUp && _canAttack:
                     _canAttack = false;
                     var transform2 = transform;
                     Instantiate(windPowerUp, transform2.position, transform2.rotation);
-                    Debug.Log(facingDirection);
                     break;
             }
         }

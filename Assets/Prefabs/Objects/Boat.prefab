@@ -20,7 +20,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &7873187445304274806
 Transform:
   m_ObjectHideFlags: 0
@@ -140,6 +140,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d74da3a846ab4e959117c0abf85d767b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  boatVelocity: 15
 --- !u!50 &1829330502
 Rigidbody2D:
   serializedVersion: 4

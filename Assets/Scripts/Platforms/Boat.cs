@@ -1,5 +1,6 @@
 ﻿
 using Interfaces;
+using PowerUps;
 using UnityEngine;
 
 namespace Platforms
@@ -12,25 +13,20 @@ namespace Platforms
     
     public class Boat : MonoBehaviour, IWindObject
     {
-        
-        private Rigidbody2D _rigidbody;
 
-        private void Awake()
-        {
-            _rigidbody = GetComponent<Rigidbody2D>();
-        }
-        
+        [SerializeField][Range(5, 20)] private int boatVelocity = 10;
+
         private void OnTriggerEnter2D(Collider2D col)
         {
-            if (col.gameObject.CompareTag("WindProjectile"))
-            {
-                WindObjectInteraction();
-            }
+            if (!col.gameObject.CompareTag("WindProjectile")) return;
+            
+            col.GetComponent<PowerUpWind>().BoatCollision();
+            WindObjectInteraction();
         }
         
         public void WindObjectInteraction()
         {
-            transform.position += transform.right * (10 * Time.deltaTime);
+            transform.position += transform.right * (boatVelocity * Time.deltaTime);
         }
         
         // 

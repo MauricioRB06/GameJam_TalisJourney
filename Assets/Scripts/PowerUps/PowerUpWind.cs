@@ -43,6 +43,11 @@ namespace PowerUps
         {
             Destroy(gameObject);
         }
+
+        public void BoatCollision()
+        {
+            Destroy(gameObject);
+        }
         
     }
 }
