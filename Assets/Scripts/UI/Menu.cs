@@ -8,7 +8,8 @@ namespace UI
 {
     public class Menu : MonoBehaviour
     {
-        
+        [Header("Player Stats Settings")] [Space(5)]
+        [Tooltip("")]
         [SerializeField] private Toggle fullScreenToggle;
         [SerializeField] private TMP_Dropdown resolutionDropdown;
         [SerializeField] private GameObject maxVolume;
@@ -16,17 +17,20 @@ namespace UI
         
         // 
         private bool _fullScreen;
-//
+        
+        // 
         private Resolution[] _resolutionList;
         
-        private enum Levels{
+        // 
+        private enum Levels {
             Credits,
             Level_0
         }
         
+        // 
         private Levels _sceneToMove;
         
-        //
+        // 
         private void OnEnable()
         {
             // 
@@ -71,6 +75,7 @@ namespace UI
             PlayerPrefs.SetInt("ScreenResolution", resolutionDropdown.value);
         }
         
+        // 
         public void ChangeVolume(int volume)
         {
             AudioListener.volume = volume;
