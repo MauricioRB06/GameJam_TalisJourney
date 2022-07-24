@@ -62,38 +62,10 @@ namespace DamageObjects
             if (!collision.gameObject.CompareTag("Player")) return;
             
             collision.transform.GetComponent<PlayerController>().PlayerHealth.TakeDamage(damageToGive);
-            
-            if (damageToGive <= knockbackForce)
-            {
-                collision.transform.GetComponent<PlayerController>().KnockBackAnimation();
-                collision.transform.GetComponent<PlayerController>().KnockBack(knockbackDuration,
-                    knockbackForce, transform);
-            }
-            else
-            {
-                collision.transform.GetComponent<PlayerController>().KnockBackAnimation();
-                collision.transform.GetComponent<PlayerController>().KnockBack(knockbackDuration,
-                    knockbackForce, transform);
-            }
+            collision.transform.GetComponent<PlayerController>().KnockBackAnimation();
+            collision.transform.GetComponent<PlayerController>().KnockBack(knockbackDuration,
+                knockbackForce, transform);
         }
 
-        // Changes the direction of rotation of the object.
-        public void ChangeRotationDirection() => rotationDirection = !rotationDirection;
-
-        
-        // Allows you to change the state of the rotating object, to stop or resume rotation.
-        public void ChangeRotationState()
-        {
-            if (isItRotating)
-            {
-                isItRotating = false;
-            }
-            else
-            {
-                isItRotating = true;
-                Destroy(rotationAxis.GetChild(0).gameObject);
-            }
-        }
-        
     }
 }

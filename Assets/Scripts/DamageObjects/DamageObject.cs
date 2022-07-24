@@ -35,12 +35,7 @@ namespace DamageObjects
         [Tooltip("It is the duration that the Knockback will last.")]
         [Range(1.0F, 2.0f)][SerializeField] private float knockbackDuration = 1;
         [Space(15)]
-        
-        [Header("SFX Settings")] [Space(5)]
-        [Tooltip("If left empty, it will not reproduce anything")]
-        [SerializeField] private GameObject sfxDamageObject;
-        
-        
+
         // Checks how much time has elapsed at one point before switching to the next point.
         private float _currentWaitTime;
         
@@ -54,11 +49,6 @@ namespace DamageObjects
             {
                 Debug.LogError($"<color=#D22323><b>The object: {gameObject.name} has been configured" +
                                " as movable, please add at least 2 points in the movement route.</b></color>");
-            }
-            if (sfxDamageObject != null)
-            {
-                var objectTransform = transform;
-                Instantiate(sfxDamageObject, objectTransform.position, Quaternion.identity, objectTransform);
             }
             
             _currentWaitTime = movementWaitingTime;
@@ -101,25 +91,10 @@ namespace DamageObjects
             if (!collision.transform.CompareTag("Player")) return;
             
             collision.transform.GetComponent<PlayerController>().PlayerHealth.TakeDamage(damageToGive);
-            
-            if (damageToGive <= knockbackForce)
-            {
-                collision.transform.GetComponent<PlayerController>().KnockBackAnimation();
-                collision.transform.GetComponent<PlayerController>().KnockBack(knockbackDuration,
-                    knockbackForce, transform);
-            }
-            else
-            {
-                collision.transform.GetComponent<PlayerController>().KnockBackAnimation();
-                collision.transform.GetComponent<PlayerController>().KnockBack(knockbackDuration,
-                    knockbackForce, transform);
-            }
+            collision.transform.GetComponent<PlayerController>().KnockBackAnimation();
+            collision.transform.GetComponent<PlayerController>().KnockBack(knockbackDuration,
+                knockbackForce, transform);
         }
         
-        // Sets the object as static.
-        public bool SetAsStaticDamageObject => isMovableDamageObject = false;
-        
-        // Sets the object as movable.
-        public bool SetAsMovableDamageObject => isMovableDamageObject = true;
     }
 }

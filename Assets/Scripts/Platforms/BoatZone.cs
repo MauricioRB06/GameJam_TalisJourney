@@ -10,7 +10,6 @@ namespace Platforms
         private void OnTriggerEnter2D(Collider2D col)
         {
             if (!col.transform.CompareTag("Boat")) return;
-            
             col.transform.GetComponent<Boat>().DestroyBoat();
         }
         

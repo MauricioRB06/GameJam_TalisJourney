@@ -8,6 +8,9 @@ TagManager:
   - WindProjectile
   - FireProjectile
   - Boat
+  - WaterProjectile
+  - ElectricProjectile
+  - HUD
   layers:
   - Default
   - TransparentFX

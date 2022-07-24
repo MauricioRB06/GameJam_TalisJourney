@@ -17,7 +17,7 @@ namespace Player
         // 
         private void Start()
         {
-            healthAmount = maxHealth;
+            PlayerHealthDelegate?.Invoke(healthAmount);
         }
         
         // 

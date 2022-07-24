@@ -33,6 +33,9 @@ namespace UI
         // 
         private void OnEnable()
         {
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.Confined;
+            
             // 
             _resolutionList = Screen.resolutions;
             

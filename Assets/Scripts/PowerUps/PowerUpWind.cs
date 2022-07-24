@@ -14,13 +14,16 @@ namespace PowerUps
     {
         
         // To configure the projectile properties, based on the launcher settings.
-        [SerializeField][Range(1.0f,20.0f)] private float projectileSpeed = 10.0f;
+        [SerializeField][Range(1.0f,20.0f)] private float projectileSpeed = 8.0f;
+        [SerializeField][Range(2f,8.0f)] private float projectileLife = 5.0f;
         
+        // 
         private Vector3 _movementDirection;
         
+        // 
         private void Awake()
         {
-            if (PlayerController.Instance.facingDirection == 1)
+            if (PlayerController.Instance.FacingDirection == 1)
             {
                 _movementDirection = transform.right;
             }
@@ -31,6 +34,7 @@ namespace PowerUps
             }
             
             transform.tag = "WindProjectile";
+            StartCoroutine(DestroyProjectile());
         }
         
         // Checks if the projectile has not crashed and moves it at the set speed.
@@ -39,13 +43,24 @@ namespace PowerUps
             transform.position += _movementDirection * (projectileSpeed * Time.deltaTime);
         }
         
-        private void OnCollisionEnter2D(Collision2D collision)
-        {
-            Destroy(gameObject);
-        }
-
+        // 
         public void BoatCollision()
         {
+            StopCoroutine(DestroyProjectile());
+            Destroy(gameObject);
+        }
+        
+        // 
+        private void OnCollisionEnter2D(Collision2D collision)
+        {
+            StopCoroutine(DestroyProjectile());
+            Destroy(gameObject);
+        }
+        
+        // 
+        private IEnumerator DestroyProjectile()
+        {
+            yield return new WaitForSeconds(projectileLife);
             Destroy(gameObject);
         }
         

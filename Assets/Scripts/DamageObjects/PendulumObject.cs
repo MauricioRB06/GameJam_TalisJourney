@@ -67,34 +67,10 @@ namespace DamageObjects
             if (!collision.gameObject.CompareTag("Player")) return;
             
             collision.transform.GetComponent<PlayerController>().PlayerHealth.TakeDamage(damageToGive);
-            
-            if (damageToGive <= knockbackForce)
-            {
-                collision.transform.GetComponent<PlayerController>().KnockBackAnimation();
-                collision.transform.GetComponent<PlayerController>().KnockBack(knockbackDuration,
-                    knockbackForce, transform);
-            }
-            else
-            {
-                collision.transform.GetComponent<PlayerController>().KnockBackAnimation();
-                collision.transform.GetComponent<PlayerController>().KnockBack(knockbackDuration,
-                    knockbackForce, transform);
-            }
+            collision.transform.GetComponent<PlayerController>().KnockBackAnimation();
+            collision.transform.GetComponent<PlayerController>().KnockBack(knockbackDuration,
+                knockbackForce, transform);
         }
-        
-        // Allows you to change the pendulum state, to stop or resume its oscillation.
-        public void ChangeOscillationState()
-        {
-            if (isItOscillating)
-            {
-                isItOscillating = false;
-            }
-            else
-            {
-                isItOscillating = true;
-                Destroy(rotationAxis.GetChild(0).gameObject);
-            }
-        }
-        
+
     }
 }

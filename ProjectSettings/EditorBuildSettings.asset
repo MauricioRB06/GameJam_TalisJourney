@@ -10,10 +10,16 @@ EditorBuildSettings:
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
     path: Assets/Maps/Level_0.unity
-    guid: 43974f0c864f25640bfdfe5b8073d98f
+    guid: 14ed6281659bee04182433b12cdf4068
   - enabled: 1
     path: Assets/Maps/Level_1.unity
+    guid: 43974f0c864f25640bfdfe5b8073d98f
+  - enabled: 1
+    path: Assets/Maps/Level_2.unity
     guid: d2fdbfa9d8d3e444db6191943416baf6
+  - enabled: 1
+    path: Assets/Maps/Level_3.unity
+    guid: 7ed533a56ca317f4ca78bb5ab5f3bcf0
   - enabled: 1
     path: Assets/Maps/Credits.unity
     guid: 5b52c52ce803b4841b0726ea987c802c

@@ -1,5 +1,4 @@
 ﻿
-using Interfaces;
 using PowerUps;
 using UnityEngine;
 
@@ -11,21 +10,16 @@ namespace Platforms
     [RequireComponent(typeof(CircleCollider2D))]
     [RequireComponent(typeof(Rigidbody2D))]
     
-    public class Boat : MonoBehaviour, IWindObject
+    public class Boat : MonoBehaviour
     {
 
-        [SerializeField][Range(5, 20)] private int boatVelocity = 10;
+        [SerializeField][Range(5, 20)] private int boatVelocity = 15;
 
         private void OnTriggerEnter2D(Collider2D col)
         {
             if (!col.gameObject.CompareTag("WindProjectile")) return;
             
             col.GetComponent<PowerUpWind>().BoatCollision();
-            WindObjectInteraction();
-        }
-        
-        public void WindObjectInteraction()
-        {
             transform.position += transform.right * (boatVelocity * Time.deltaTime);
         }
         
@@ -45,7 +39,7 @@ namespace Platforms
 
         public void DestroyBoat()
         {
-            Destroy(gameObject);
+            Destroy(this);
         }
         
     }

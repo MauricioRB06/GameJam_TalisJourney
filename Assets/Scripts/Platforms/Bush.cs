@@ -1,5 +1,4 @@
 ﻿
-using Interfaces;
 using UnityEngine;
 
 namespace Platforms
@@ -9,7 +8,7 @@ namespace Platforms
     [RequireComponent(typeof(BoxCollider2D))]
     [RequireComponent(typeof(Animator))]
     
-    public class Bush : MonoBehaviour, IFireObject
+    public class Bush : MonoBehaviour
     {
         private static readonly int Burn = Animator.StringToHash("Burn");
         private Animator _animator;
@@ -23,13 +22,8 @@ namespace Platforms
         {
             if (collision.gameObject.CompareTag("FireProjectile"))
             {
-                FireObjectInteraction();
+                _animator.SetTrigger(Burn);
             }
-        }
-        
-        public void FireObjectInteraction()
-        {
-            _animator.SetTrigger(Burn);
         }
 
         public void BushFire()
