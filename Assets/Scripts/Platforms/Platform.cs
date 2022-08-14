@@ -1,4 +1,26 @@
 ﻿
+// Copyright (c) 2022 MauricioRB06 <https://github.com/MauricioRB06>
+// MIT License < Please Read LICENSE.md >
+// Collaborators: @barret50cal3011 @DanielaCaO @Kradyn
+// 
+// The Purpose Of This Script Is:
+//
+//  Set the behavior of the platforms.
+//
+// Documentation and References:
+//
+//  Unity Awake: https://docs.unity3d.com/ScriptReference/MonoBehaviour.Awake.html
+//  Unity Start: https://docs.unity3d.com/ScriptReference/MonoBehaviour.Start.html
+//  Unity Update: https://docs.unity3d.com/ScriptReference/MonoBehaviour.Update.html
+//  Unity FixedUpdate: https://docs.unity3d.com/ScriptReference/MonoBehaviour.FixedUpdate.html
+//  Unity OnTriggerEnter2D: https://docs.unity3d.com/ScriptReference/MonoBehaviour.OnTriggerEnter2D.html
+//  Unity OnCollisionEnter2D: https://docs.unity3d.com/ScriptReference/MonoBehaviour.OnCollisionEnter2D.html
+//  Unity OnCollisionExit2D: https://docs.unity3d.com/ScriptReference/MonoBehaviour.OnCollisionExit2D.html
+//  Unity Coroutine: https://docs.unity3d.com/ScriptReference/MonoBehaviour.StartCoroutine.html
+//
+//  -----------------------------
+// Last Update: 14/08/2022 By MauricioRB06
+
 using System.Collections;
 using UnityEngine;
 
@@ -13,6 +35,7 @@ namespace Platforms
     
     public class Platform : MonoBehaviour
     {
+        
         [Header("Platform Settings")] [Space(5)]
         [Tooltip("Default option")]
         [SerializeField] private bool isStaticPlatform = true;
@@ -83,7 +106,7 @@ namespace Platforms
         // Checks how much time has elapsed at one point before switching to the next point.
         private float _currentWaitTime;
         
-        // ID parameters for the animator.
+        // ID parameters for the animator controller.
         private static readonly int Falling = Animator.StringToHash("Falling");
         private static readonly int Fall = Animator.StringToHash("Fall");
         
@@ -263,37 +286,6 @@ namespace Platforms
             
             collision.transform.SetParent(null);
         }
-        
-        // Sets the platform as static.
-        public void SetStaticPlatform()
-        {
-            isStaticPlatform = true;
-            isMovablePlatform = false;
-        }
-        
-        // Sets the platform as movable.
-        public void SetMovablePlatform()
-        {
-            isStaticPlatform = false;
-            isMovablePlatform = true;
-        }
 
-        // Change the platform drop status.
-        public void ChangePlatformFallingState()
-        {
-            platformFalls = !platformFalls;
-        }
-        
-        // Change the platform return status.
-        public void ChangePlatformReturnState()
-        {
-            platformReturn = !platformReturn;
-        }
-        
-        // Change the platform vibration status.
-        public void ChangePlatformVibrationState()
-        {
-            vibratesBeforeFalling = !vibratesBeforeFalling;
-        }
     }
 }

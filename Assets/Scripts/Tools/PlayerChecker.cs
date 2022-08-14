@@ -3,11 +3,11 @@
 // MIT License < Please Read LICENSE.md >
 // Collaborators: @barret50cal3011 @DanielaCaO @Kradyn
 // 
-// The Purpose Of This Script Is:
+//  The Purpose Of This Script Is:
 //
-//  Sets the behavior of the boat stop zone.
+//  To free the player from matching with other objects and make it a persistent object.
 //
-// Documentation and References:
+//  Documentation and References:
 //
 //  Unity OnTriggerEnter2D: https://docs.unity3d.com/ScriptReference/MonoBehaviour.OnTriggerEnter2D.html
 //
@@ -16,19 +16,20 @@
 
 using UnityEngine;
 
-namespace Platforms
+namespace Tools
 {
-    // Component required for this script to work.
+    // Component required fot this script to work.
     [RequireComponent(typeof(BoxCollider2D))]
     
-    public class BoatZone : MonoBehaviour
+    public class PlayerChecker : MonoBehaviour
     {
         
-        // When a boat touches the zone, its function is called to stop it and then this object is destroyed.
+        // When the player collides, it removes the pairings and makes it a persistent object.
         private void OnTriggerEnter2D(Collider2D col)
         {
-            if (!col.transform.CompareTag("Boat")) return;
-            col.transform.GetComponent<Boat>().DestroyBoat();
+            if (!col.transform.CompareTag("Player")) return;
+            col.transform.SetParent(null);
+            DontDestroyOnLoad(col.gameObject);
             Destroy(gameObject);
         }
         

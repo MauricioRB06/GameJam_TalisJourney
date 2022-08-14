@@ -1,4 +1,20 @@
 ﻿
+// Copyright (c) 2022 MauricioRB06 <https://github.com/MauricioRB06>
+// MIT License < Please Read LICENSE.md >
+// Collaborators: @barret50cal3011 @DanielaCaO @Kradyn
+// 
+// The Purpose Of This Script Is:
+//
+//  Set the behavior of the life item.
+//
+// Documentation and References:
+//
+//  Unity Awake: https://docs.unity3d.com/ScriptReference/MonoBehaviour.Awake.html
+//  Unity OnTriggerEnter2D: https://docs.unity3d.com/ScriptReference/MonoBehaviour.OnTriggerEnter2D.html
+//
+//  -----------------------------
+// Last Update: 14/08/2022 By MauricioRB06
+
 using Player;
 using UnityEngine;
 
@@ -12,10 +28,12 @@ namespace Items
     
     public class HealthItem : MonoBehaviour
     {
+        
         [Header("Health Item Settings")][Space(5)]
-        [Tooltip("Amount of life the player will gain")]
+        [Tooltip("Amount of life the player will gain.")]
         [Range(1.0f, 99.0f)][SerializeField] private float healthToGive = 5;
         [SerializeField] private AudioClip healthSfx;
+        
         // To control the behavior of the collider.
         private CircleCollider2D _healthItemCollider;
         private AudioSource _healthItemAudioSource;

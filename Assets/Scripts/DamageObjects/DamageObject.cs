@@ -1,4 +1,20 @@
 ﻿
+// Copyright (c) 2022 MauricioRB06 <https://github.com/MauricioRB06>
+// MIT License < Please Read LICENSE.md >
+// Collaborators: @barret50cal3011 @DanielaCaO @Kradyn
+// 
+// The Purpose Of This Script Is:
+//
+//  Control the behavior of objects that can harm the player.
+//
+// Documentation and References:
+//
+//  Unity Awake: https://docs.unity3d.com/ScriptReference/MonoBehaviour.Awake.html
+//  Unity Update: https://docs.unity3d.com/ScriptReference/MonoBehaviour.Update.html
+//  Unity OnCollisionEnter2D: https://docs.unity3d.com/ScriptReference/MonoBehaviour.OnCollisionEnter2D.html
+// 
+// -----------------------------
+// Last Update: 14/08/2022 By MauricioRB06
 
 using Player;
 using UnityEngine;
@@ -12,37 +28,36 @@ namespace DamageObjects
     
    public class DamageObject : MonoBehaviour
     {
-
+        
         [Header("Movement Settings")] [Space(5)]
-        [Tooltip("Sets whether the object will move or not")]
+        [Tooltip("Sets whether the object will move or not.")]
         [SerializeField] private bool isMovableDamageObject;
-        [Tooltip("The waiting time between each movement")]
+        [Tooltip("The waiting time between each movement.")]
         [Range(0.1F, 5F)] [SerializeField] private float movementWaitingTime = 1;
-        [Tooltip("Object movement speed")]
+        [Tooltip("Object movement speed.")]
         [Range(1F, 10F)] [SerializeField] private float movementSpeed = 1;
         [Space(15)]
         
         [Header("Movement Points Route")] [Space(5)]
-        [Tooltip("There must be at least 2 points on the route")]
+        [Tooltip("There must be at least 2 points on the route.")]
         [SerializeField] private Transform[] movementPoints;
         [Space(15)]
         
         [Header("Damage Settings")] [Space(5)] 
-        [Tooltip("If it is not a platform, it may cause damage to the player")]
+        [Tooltip("Damage that will be done to the player when colliding with this object.")]
         [Range(1.0F, 30.0f)][SerializeField] private float damageToGive = 5;
-        [Tooltip("If the damage applied is greater than this strength, a HighKnockback will be applied to the player")]
+        [Tooltip("Strength to be applied to the player.")]
         [Range(20.0f, 100.0f)][SerializeField] private float knockbackForce = 80;
         [Tooltip("It is the duration that the Knockback will last.")]
         [Range(1.0F, 2.0f)][SerializeField] private float knockbackDuration = 1;
-        [Space(15)]
-
+        
         // Checks how much time has elapsed at one point before switching to the next point.
         private float _currentWaitTime;
         
         // Navigates through the movementPoints to indicate to the object to which it should move.
         private int _movementPointIterator;
-
-        // Sets the initial settings of the object.
+        
+        // Verify that if the object is mobile, it has the minimum number of waypoints necessary.
         private void Awake()
         {
             if (isMovableDamageObject && movementPoints.Length < 2)
@@ -85,7 +100,7 @@ namespace DamageObjects
             }
         }
         
-        // Check if the object collided with the player to apply damage.
+        // Check if the object collided with the player to apply damage and knockback.
         private void OnCollisionEnter2D(Collision2D collision)
         {
             if (!collision.transform.CompareTag("Player")) return;
