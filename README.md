@@ -17,15 +17,70 @@
 
 <p style='text-align: left;'>
 
-**[ <img height="10" src="https://github.com/MauricioRB06/MauricioRB06/blob/478cbf444a36395ff2048b6983ac26b97d1086fb/Assets/EN.png"> EN ]** Project Description Here.
+**[ <img height="10" src="https://github.com/MauricioRB06/MauricioRB06/blob/478cbf444a36395ff2048b6983ac26b97d1086fb/Assets/EN.png"> EN ]** Talis Jorurney is a 2D platform video game, where we control Talis, a Dado Knight who must save his town from the dreaded Summoner who has come to terrorize its inhabitants and spread chaos.
 
+This project was developed for the <a href="https://itch.io/jam/gmtk-jam-2022" target="_blank">GMTK GameJam 2022</a>, although unfortunately due to a last minute inconvenience with the page it was not sent :(
+
+The game has been made entirely in Unity with C# and the following has been implemented:
+
+- A class for the main character controller
+- A component to manage the player's life and communicate his state through delegates.
+- A script to manage the main menu
+- A script to manage the credits menu
+- A script to control the game interface, including the pause and death menu
+- A Script to Control the final boss interface
+- A script to control the sound effects
+- A component to manage the targeting of the Cinemachine virtual cameras
+- A script to reposition the player when loading the level
+- A script for each projectile that the player can launch
+- A script for the bushes that can be destroyed
+- A script to control the movement of the boat
+- A Script to control the customizable behavior of the platforms
+- An Item Class, to regenerate the character's health
+- A Teleporter Class, to perform level changes
+- A Dashboard Class, to display PopUp messages during the tutorial
+- A DamageObject Class, for the static objects that cause damage to the player
+- A PendulumObject class, to define the behavior of the Pendulums that cause damage to the player.
+- A RotatingChainedObject class to define the behavior of the rotating balls of thorns.
+- An Enemy Basic class to define the behavior of the minions.
+- A FinalBoss Class that defines the behavior of the final boss, its attack routines, etc.
+- A Script for the death zones
+- Among other scripts to prevent errors during the game.
 </p>
 
 <div align="center"> -------------------------------------------------------------------------------------------------------------------------------- </div>
 
 <p style='text-align: left;'>
 
-**[ <img height="10" src="https://github.com/MauricioRB06/MauricioRB06/blob/478cbf444a36395ff2048b6983ac26b97d1086fb/Assets/ES.png"> ES ]** Descripcion del Proyecto Aquí.
+**[ <img height="10" src="https://github.com/MauricioRB06/MauricioRB06/blob/478cbf444a36395ff2048b6983ac26b97d1086fb/Assets/ES.png"> ES ]** Talis Jorurney es un videojuego de plataformas en 2D, donde controlamos a Talis, un Caballero Dado que deberá salvar a su pueblo del temible Summoner quien ha llegado para atemorizar a sus habitantes y sembrar el caos.
+
+Este proyecto fue desarrollado para la <a href="https://itch.io/jam/gmtk-jam-2022" target="_blank">GMTK GameJam 2022</a>, aunque lastimosamente por un inconveniente a último minuto con la página no alcanzo a quedar enviado :(
+
+En el juego se ha realizado completamente en Unity con C# y se ha implementado lo siguiente:
+
+- Una clase para el controlador del personaje principal
+- Un componente para administrar la vida del jugador y comunicar su estado a través de delegados
+- Un Script para Administrar el menú principal
+- Un Script para Administrar el menú de créditos
+- Un Script para Controlar la interfaz de juego, incluyendo el menú de pausa y de muerte
+- Un Script para Controlar la interfaz del jefe final
+- Un Script para controlar los efectos de sonido
+- Un componente para administrar el target de las cámaras virtuales de Cinemachine
+- Un Script para reposicionar al jugador cuando carga el nivel
+- Un Script para cada proyectil que puede lanzar el jugador
+- Un Script para los arbustos que pueden ser destruidos
+- Un Script para controlar el movimiento del bote
+- Un Script para controlar el comportamiento personalizable de las plataformas
+- Una Clase Item, para regenerar la salud del personaje
+- Una Clase Teleporter, para realizar el cambio de niveles
+- Una Clase tablero, que muestra mensajes PopUp durante el tutorial
+- Una Clase DamageObject, para los objetos estáticos que causan daño al jugador
+- Una Clase PendulumObject, para definir el comportamiento de los Péndulos que hacen daño al jugador
+- Una Clase RotatingChainedObject para definir el comportamiento de las bolas de espinas que rotan
+- Una Clase Enemy Basic que define el comportamiento de los minions
+- Una Clase FinalBoss que define el comportamiento del jefe final, sus rutinas de ataque, etc.
+- Un Script para las zonas de muerte
+- Entre otros scripts para prevenir errores durante el juego
 
 </p>
 
