@@ -5,7 +5,7 @@
 <p align="center"><img height="15" src="https://github.com/MauricioRB06/MauricioRB06/blob/775f8d6d394ada1548db8bafc308dfc0c6f60b54/Assets/Readme_ItchioLogo.png"><a href="https://mauriciorb06.itch.io/talis-journey" target="_blank">  Download Game on Itch.io  </a><img height="15" src="https://github.com/MauricioRB06/MauricioRB06/blob/478cbf444a36395ff2048b6983ac26b97d1086fb/Portfolio%20Assets/Unreal%20Projects/DuckHunter/Readme_WindowsLogo.png"></p>
 <br>
 <div align="center"> -------------------------------------------------------------------------------------------------------------------------------- </div>
-<p align="center">Collaborators:    Pixel Art [ <a href="https://kradron.itch.io/" target="_blank">  @Kradyn  </a> ] // GameDesign [ <a href="https://github.com/barret50cal3011" target="_blank">  @B4RRET  </a> ] //  Pixel Art [ <a href="https://github.com/DanielaCaO" target="_blank">  @DanielaCaO  </a> ]</p>
+<p align="center">Collaborators:⠀⠀⠀⠀⠀⠀‎‎⠀⠀**Pixel Art [ <a href="https://kradron.itch.io/" target="_blank">  @Kradyn  </a> ]⠀⠀⠀⠀⠀GameDesign [ <a href="https://github.com/barret50cal3011" target="_blank">  @B4RRET  </a> ]⠀⠀⠀⠀⠀Pixel Art [ <a href="https://github.com/DanielaCaO" target="_blank">  @DanielaCaO  </a> ]**</p>
 <div align="center"> -------------------------------------------------------------------------------------------------------------------------------- </div>
 <br>
 <div align="center"><a href="https://youtu.be/vJWYGgyRQcM" target="_blank"><img width=90% src="https://github.com/MauricioRB06/MauricioRB06/blob/13591fba72fa8d09eb4cc903a4626fe36ac7b4cf/Portfolio%20Assets/Unity%20Projects/TalisJourney/TalisJourney_Banner.png"></a></div>
