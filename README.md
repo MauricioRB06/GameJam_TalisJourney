@@ -17,7 +17,7 @@
 
 <p style='text-align: left;'>
 
-**[ <img height="10" src="https://github.com/MauricioRB06/MauricioRB06/blob/478cbf444a36395ff2048b6983ac26b97d1086fb/Assets/EN.png"> EN ]** Talis Jorurney is a 2D platform video game, where we control Talis, a Dado Knight who must save his town from the dreaded Summoner who has come to terrorize its inhabitants and spread chaos.
+**[ <img height="10" src="https://github.com/MauricioRB06/MauricioRB06/blob/478cbf444a36395ff2048b6983ac26b97d1086fb/Assets/EN.png"> EN ]** Talis Jorurney is a 2D platform video game, where we control Talis, a Dice Knight who must save his town from the dreaded Summoner who has come to terrorize its inhabitants and spread chaos.
 
 This project was developed for the <a href="https://itch.io/jam/gmtk-jam-2022" target="_blank">GMTK GameJam 2022</a>, although unfortunately due to a last minute inconvenience with the page it was not sent :(
 
